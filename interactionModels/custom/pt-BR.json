@@ -1,0 +1,173 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "espírito negro",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "NextBossIntent",
+          "slots": [],
+          "samples": [
+            "qual é o próximo chefe",
+            "qual é o próximo boss",
+            "quando é o próximo boss",
+            "quando é o próximo chefe",
+            "próximo boss"
+          ]
+        },
+        {
+          "name": "NextBossByNameIntent",
+          "slots": [
+            {
+              "name": "boss_name",
+              "type": "BOSS_NAME",
+              "samples": [
+                "quint muraka",
+                "offin",
+                "garmoth",
+                "kutum",
+                "karanda",
+                "nouver",
+                "vell",
+                "kzarka"
+              ]
+            }
+          ],
+          "samples": [
+            "que hora nasce a {boss_name}",
+            "que hora nasce o {boss_name}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "garmoth"
+              }
+            },
+            {
+              "name": {
+                "value": "kzarka"
+              }
+            },
+            {
+              "name": {
+                "value": "vell"
+              }
+            },
+            {
+              "name": {
+                "value": "offin"
+              }
+            },
+            {
+              "name": {
+                "value": "kutum"
+              }
+            },
+            {
+              "name": {
+                "value": "nouver"
+              }
+            },
+            {
+              "name": {
+                "value": "quint_muraka"
+              }
+            },
+            {
+              "name": {
+                "value": "karanda"
+              }
+            }
+          ],
+          "name": "BOSS_NAME"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "NextBossByNameIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "boss_name",
+              "type": "BOSS_NAME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.903725738245.1136392239600"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.266764916536.282603482308.1056284030972",
+                  "values": [
+                    "karanda",
+                    "quint_muraka",
+                    "nouver",
+                    "kutum",
+                    "offin",
+                    "vell",
+                    "kzarka",
+                    "garmoth"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.903725738245.1136392239600",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual é o nome do boss?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.903725738245.1136392239600.1516503822630",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Não entendi o nome do boss, pode repetir?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.266764916536.282603482308.1056284030972",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Não entendi o nome do boss, pode repetir?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "9"
+}

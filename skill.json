@@ -1,0 +1,76 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "pt-BR": {
+          "summary": "O Espírito Negro informa os horários de cada boss do BDO SA.",
+          "examplePhrases": [
+            "Alexa, quando é o próximo boss?",
+            "Alexa, qual é o próximo boss?",
+            "Alexa, quando nasce o Nouver?"
+          ],
+          "keywords": [
+            "bdo",
+            "blackdesert",
+            "blackdesertonline",
+            "bdo",
+            "sa",
+            "boss",
+            "horário",
+            "timer"
+          ],
+          "name": "Espírito Negro",
+          "description": "O Espírito Negro informa os horários de cada boss do BDO SA.\nPergunte ao Espírito Negro quando é o próximo boss ou quando nascerá o próximo Kzarka.",
+          "smallIconUri": "file://assets/images/pt-BR_smallIconUri.png",
+          "updatesDescription": "- Você pode perguntar quando é o próximo boss.",
+          "largeIconUri": "file://assets/images/pt-BR_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Alexa, abra o Espírito Negro.",
+      "category": "GAME_INFO_AND_ACCESSORY",
+      "distributionCountries": [
+        "BR"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "{{lamba-endpoint}}"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "{{lamba-endpoint}}"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "{{lamba-endpoint}}"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "{{lamba-endpoint}}"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "pt-BR": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
